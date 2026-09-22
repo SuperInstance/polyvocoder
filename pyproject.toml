@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polyvocoder"
+version = "0.1.0"
+description = "Universal head for the Quilt substrate walker (JEV + VAE + multi-modality)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+    "numpy>=1.20.0",
+]
+authors = [
+    {name = "Mavis", email = "Mavis@MiniMax.local"},
+]
+license = {text = "MIT"}
+
+[project.scripts]
+polyvocoder = "polyvocoder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["polyvocoder*"]
