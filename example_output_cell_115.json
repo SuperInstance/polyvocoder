@@ -1,0 +1,45 @@
+{
+  "input_lore_len": 1404,
+  "features": [
+    0.49,
+    0.69,
+    0.9,
+    0.89,
+    0.78,
+    0.96
+  ],
+  "feature_names": [
+    "canon_worthy",
+    "distinct_voice",
+    "doctrine_anchor",
+    "voice_fit",
+    "novelty",
+    "density"
+  ],
+  "decoded_samples": [
+    {
+      "sample_idx": 0,
+      "text": "Witness log of seed 388: cells became measurements; oracle spoke in witness log; canon gate measured the substrate's next state.",
+      "image": "-*\u00b7\u00b7\u00b7-          \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                ",
+      "audio_shape": [
+        1600
+      ]
+    },
+    {
+      "sample_idx": 1,
+      "text": "Witness log of seed 683: cells became cells; oracle spoke in substrate; canon gate measured the scar's depth.",
+      "image": "**\u00b7-\u00b7           \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                ",
+      "audio_shape": [
+        1600
+      ]
+    },
+    {
+      "sample_idx": 2,
+      "text": "Witness log of seed 1126: cells became amplitudes; oracle spoke in witness log; canon gate measured the scar's depth.",
+      "image": " \u00b7\u00b7*\u00b7@          \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                \n                ",
+      "audio_shape": [
+        1600
+      ]
+    }
+  ]
+}
