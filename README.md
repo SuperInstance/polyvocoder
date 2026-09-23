@@ -63,6 +63,44 @@ lore text → JEV (6 questions) → 6 features → VAE.encode → z (latent)
                                          prose      16x16 ASCII   4-sec 16kHz
 ```
 
+## HTTP Server
+
+Run the polyvocoder as an HTTP service (stdlib only, no Flask needed):
+
+```bash
+python3 -m polyvocoder.serve  # listens on http://0.0.0.0:8000
+```
+
+Then:
+
+```bash
+# Health check
+curl http://localhost:8000/health
+
+# Verify canary
+curl http://localhost:8000/canary
+# {"canary": "0x24a555471370b18d"}
+
+# Extract JEV features
+curl -X POST -H "Content-Type: application/json"   -d '{"text":"The canon gate made itself heard."}'   http://localhost:8000/v1/features
+# {"canon_worthy": 0.52, "distinct_voice": 0.73, ...}
+
+# Run full pipeline
+curl -X POST -H "Content-Type: application/json"   -d '{"text":"Cells are scars.","n_samples":2}'   http://localhost:8000/v1/pipeline
+# {"features": [...], "decoded_samples": [...]}
+```
+
+## End-to-End Demo
+
+Run the demo script to see the full pipeline:
+
+```bash
+python3 demo.py
+```
+
+This generates 3 samples (text + ASCII image + WAV audio) from a single canon lore
+input. Output is in `demo_output/`.
+
 ## Documentation
 
 The full docs are in `docs/`. Read in this order:
